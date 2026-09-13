@@ -16,7 +16,7 @@ Despues para crear las instancias crearemos el archivo docker-compose.yml
 -   API SEGUNA INSTANCIA:
     Retornara el mensaje: "Aprendiendo Docker Compose" 
 -   API TERCERA INSTANCIA:
-    Retornara el mensaje: "Crear nuevo mundo"
+    Retornara el mensaje: "Little Mariposas"
 
 
 ## EVIDENCIAS/CAPTURAS
