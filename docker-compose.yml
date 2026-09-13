@@ -1,4 +1,3 @@
-version: '0'
 services: 
   app:
     container_name: api1-Docker
@@ -6,7 +5,7 @@ services:
     ports:
     - "3000:3000"
     environment:
-    - MESSAGE= Daniela Cristina
+    - MESSAGE=${MESSAGE1}
 
   app2:
     container_name: api2-Docker
@@ -14,7 +13,7 @@ services:
     ports:
     - "3001:3000"
     environment:
-    - MESSAGE= Aprendiendo Docker Compose
+    - MESSAGE=${MESSAGE2}
 
   app3:
     container_name: api3-Docker
@@ -22,4 +21,16 @@ services:
     ports:
     - "3002:3000"
     environment:
-    - MESSAGE= Little Mariposas
+    - MESSAGE=${MESSAGE3}
+
+  db:
+    image: postgres
+    container_name: blue_wonderful
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: ${USER_Postgres}
+      POSTGRES_PASSWORD: ${PASSWORD_Postgres}
+      POSTGRES_DB: ${DB_Postgres}
+    ports:
+      - 5432:5432
