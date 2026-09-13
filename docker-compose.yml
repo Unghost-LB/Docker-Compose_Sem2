@@ -6,6 +6,8 @@ services:
     - "3000:3000"
     environment:
     - MESSAGE=${MESSAGE1}
+    volumes:
+    - data_api:/app/data
 
   app2:
     container_name: api2-Docker
@@ -14,6 +16,8 @@ services:
     - "3001:3000"
     environment:
     - MESSAGE=${MESSAGE2}
+    volumes:
+    - data_api:/app2/data
 
   app3:
     container_name: api3-Docker
@@ -22,9 +26,12 @@ services:
     - "3002:3000"
     environment:
     - MESSAGE=${MESSAGE3}
+    volumes:
+      - data_api:/app3/data
 
   db:
-    image: postgres
+    #En este caso debemos de poner la versión de Postgres
+    image: postgres:16
     container_name: blue_wonderful
     restart: always
     shm_size: 128mb
@@ -34,3 +41,9 @@ services:
       POSTGRES_DB: ${DB_Postgres}
     ports:
       - 5432:5432
+    volumes:
+      - data_prueba2:/var/lib/postgresql/data
+
+volumes:
+  data_prueba2: 
+  data_api:

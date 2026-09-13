@@ -58,6 +58,30 @@ services:
       - 8080:8080
 
 ```
+
+
+Tercera Parte:
+Volumenes
+
+Para esta parte nos guiaremos del siguiente guia:
+https://docs.docker.com/engine/storage/volumes/
+
+En la parte de "Utilice un volumen con Docker Compose" encontraremos el siguiente ejemplo:
+```
+services:
+  frontend:
+    image: node:lts
+    volumes:
+      - myapp:/home/node/app
+volumes:
+  myapp:
+    external: true
+```
+
+Para entender un poco más la configuración se visualizo los siguientes videos:
+- Docker Compose: https://www.youtube.com/watch?v=y-sMw9937PM
+- Bash: https://youtu.be/omEFZHHXVdc 
+
 ## COMANDOS
 Estos comandos se utilizan dentro de la Terminal de VS con Git Bash
 
