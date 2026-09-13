@@ -116,6 +116,41 @@ curl -i http://localhost:3002/
 ```
 docker pull postgres
 ```
+## Tipos de redes y Tipos de volumen que existen en docker
+
+- Tipos de Redes:
+
+Para la creación de aplicaciones modernas se usan varios servicios. La red Docker  sirve para definicir cómo se comunican los contenedores sin perder la separación de muchos servidores que corren de forma aislada.
+
+Para esto utiliza network drivers, que resuelven diferentees problemas:
+
+    - Bridge: Es ideal para desarrollo y pruebas al ser una red privada por defecto en un host los contenedores se pueden comunicar por IP o nombre
+    
+    - Host: Tiene mejor rendimiento, pero no permite mapear el mismo puerto en varios contenedores. El contenedor usa la IP y puertos del host directamente
+    
+    - None:Desactiva toda la red del contenedor, solo queda loopback. Es útil cuando no se necesita conectividad ni se requiere tanto aislamiento.
+    
+    - Overlay: Conecta contenedores en distintos hosts físiscos como si feran una sola red y se es usado comunmente para Clusters de Docker Swarn.
+    
+    -Macvlan: Muy utilespara apps heredadas con acceso directo a la red. Asigna una Mac propia al contenedor para que actúe como otro dispositivo físico en la LAN
+    
+    -Ipvlan: Es similar a Macvlan pero da mejor rendimiento en entorno de alta densidad por que enruta en la capa IP en vez de usar MAC.
+
+
+Fuentes:
+https://docs.docker.com/engine/network/drivers/
+https://www.datacamp.com/es/tutorial/docker-networking 
+
+- Tipos de Volumenes:
+
+Los contonedores son efimeros, esto significa que si borras uno, lo que se escribio dentro desaparece. Por eso existen los volumenes que te da datos persistentes, intercambio de datos, separación del código de la aplicación de los datos, y copia de seguridad y recuperación:
+
+    - Volumenes nombrados: Se guardan en una ruta interna y se gestionan totalmente por Docker. Recomendad para persistir datos. En este proyecto la hemos usado tambien (ej.data_prueba2)
+    
+    - Volúmenes anonimos: Igual que el primer tipo (volumenes nombrados) con el unico cambio de que el nombre es aleatorio y asignado por Docker. No tiene un identificador establa asi que es dificil de reutilizar entre despliegues.
+
+Fuentes:
+https://semaphore.io/blog/docker-volumes
 
 ## EVIDENCIAS/CAPTURAS
 Link para visualizar documento en Drive donde se sube fotos de las evidencias: 
