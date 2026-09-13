@@ -16,26 +16,9 @@ Despues para crear las instancias crearemos el archivo docker-compose.yml
 -   API SEGUNA INSTANCIA:
     Retornara el mensaje: "Aprendiendo Docker Compose" 
 -   API TERCERA INSTANCIA:
-    Retornara 
-
-
-## COMANDOS
-
-## CONIGURACION POR ENTORNO
-
-
-
-## CREDITOS
+    Retornara el mensaje: "Crear nuevo mundo"
 
 
 ## EVIDENCIAS/CAPTURAS
-- EVIDENCIA 1:
-Construir nmatsui/hello-world-api en la carpeta Api
-![alt text](image.png)
-![alt text](<Captura de pantalla 2026-09-12 132811.png>)
-
-- EVIDENCIA 2: 
-Levantar el contenedor para docker-compose y la primera instancia
-![alt text](<Captura de pantalla 2026-09-12 140623.png>)
-![alt text](<Captura de pantalla 2026-09-12 140755.png>)
-# Sem2---DOCKER-COMPOSE
+Link para visualizar documento en Drive donde se sube fotos de las evidencias: 
+https://docs.google.com/document/d/1wzvSVX5IuM5kwXisXg-7Aq_ttb8mg2Bu-3oQgOh8XUg/edit?usp=sharing
